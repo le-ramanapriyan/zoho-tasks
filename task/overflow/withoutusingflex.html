@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: capitalize;
+    }
+    .parent1 {
+      position: absolute;    
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    .parent1,
+    .content {
+      border: 2px solid black;
+      box-sizing: border-box;
+    }
+    .parent3 {
+      position: absolute;    
+      top: 120px;
+      right: 0;
+      bottom: 60px;
+      left: 0;
+    }
+    .first-page {
+      width: 200px;
+      left: 0;
+    }
+    .second-page {
+      width: 400px;
+      left: 200px;
+    }
+    .third-page {
+      left: 600px;
+    }
+    .footer {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    .child {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: scroll;
+      min-height: 0px;
+    }
+    .banner {
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      border: 2px solid black;
+      box-sizing: border-box;
+      text-transform: uppercase;
+    }
+    .items {
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      border: 2px solid black;
+    }
+    .content {
+      font-size: 20px;
+      letter-spacing: 1px;
+      word-spacing: 5px;
+    }
+    /* .parent3:nth-child(odd) .items:nth-child(odd),
+    .parent3:nth-child(even) .items:nth-child(even),
+    .content {
+      background-color: rgba(128, 128, 128, 0.5);
+    } */
+    .nav-items {
+      width: 200px;
+      border: 2px solid black;
+      padding: 2px 30px;
+      margin: 100px;
+    }
+    .navbar {
+      width: 100%;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="parent1">
+    <div class="banner">THIS IS A BANNER</div>
+    <div class="banner navbar">
+      <a class="nav-items">Logo</a>
+      <a class="nav-items">Name</a>
+      <a class="nav-items">Settings</a>
+      <a class="nav-items">Help</a>
+    </div>
+    <div class="parent2">
+      <div class="parent3 first-page">
+        <div class="banner">This is First Topic</div>
+        <div class="child">
+          <div class="items">Homepage</div>
+          <div class="items">About Us</div>
+          <div class="items">Blog Posts</div>
+          <div class="items">Author</div>
+          <div class="items">Feedback</div>
+          <div class="items">Questions</div>
+          <div class="items">Suggestions</div>
+          <div class="items">Reviews</div>
+          <div class="items">Opinions</div>
+          <div class="items">Ideas</div>
+          <div class="items">Queries</div>
+          <div class="items">Discussions</div>
+          <div class="items">Interactions</div>
+          <div class="items">Engagements</div>
+          <div class="items">Reactions</div>          
+        </div>
+      </div>
+      <div class="parent3 second-page">
+        <div class="banner">This is Second Topic</div>
+        <div class="child">
+          <div class="items">part 1</div>
+          <div class="items">part 2</div>
+          <div class="items">part 3</div>
+          <div class="items">part 4</div>
+          <div class="items">part 5</div>
+          <div class="items">part 6</div>
+          <div class="items">part 7</div>
+          <div class="items">part 8</div>
+          <div class="items">part 9</div>
+          <div class="items">part 10</div>
+          <div class="items">part 11</div>
+          <div class="items">part 12</div>
+          <div class="items">part 13</div>
+          <div class="items">part 14</div>
+          <div class="items">part 15</div>
+          <div class="items">part 16</div>
+          <div class="items">part 17</div>
+        </div>
+      </div>
+      <div class="parent3 third-page">        
+        <div class="banner">This is Output page</div>
+        <div class="child">
+        <div class="content">
+          This is a Post Page Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem ad facilis, eum nihil aliquid corporis magni maiores accusamus sequi vel architecto, eius, hic consequatur impedit. Reiciendis aliquam provident vero quae suscipit reprehenderit, modi accusamus rem. Odio, et consequatur assumenda possimus tenetur, corrupti ad aliquid amet vitae eos quos eaque deleniti omnis. Quod esse aperiam non maiores nostrum, exercitationem nihil repudiandae debitis soluta atque itaque amet repellat hic vero sit inventore ducimus optio iste quaerat quam officia dicta reprehenderit. Porro, perspiciatis, quis beatae earum cum, minima totam enim magni provident velit autem quisquam fugit debitis obcaecati accusantium voluptate optio quam magnam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto corrupti inventore, architecto quibusdam maiores quam consequatur iste dolorem, ducimus saepe obcaecati commodi impedit! Hic nulla at distinctio facere voluptatibus? Ratione perferendis et reprehenderit vero aliquam cumque suscipit laudantium nulla, a voluptatem possimus quaerat. Laborum ad, hic enim officiis dolores dolore perferendis cum debitis dolorem? Totam, accusamus eos magni animi consectetur minus, ipsam fuga quidem, natus quas aut nemo. Optio repudiandae esse molestias autem suscipit facilis officiis aliquam? Maiores architecto doloremque consequatur consectetur veritatis pariatur recusandae aperiam, exercitationem dignissimos rerum fuga quisquam dolorem iusto dolore nulla! Sequi dolores pariatur rerum quibusdam similique ea ducimus minus voluptatem sunt, quas velit odit, nihil optio quidem soluta fugiat id ut omnis officia dignissimos voluptatibus maiores laborum. Illo reiciendis neque odio corporis eligendi, minima dolorum placeat dolore quae similique impedit quas nisi illum at ad eius est adipisci incidunt cupiditate fugiat porro non sit hic excepturi. Voluptates repudiandae excepturi, ab placeat dolorum tempora dolore voluptatem autem ut rerum impedit explicabo molestiae nam expedita quibusdam repellat aperiam, saepe dolorem sint. Optio, nostrum eos officia at dicta ipsum fugit pariatur corrupti corporis! Facilis similique neque dolore nobis corrupti! Minus consequuntur dolor blanditiis. Soluta, distinctio cum! Fugit, aliquid explicabo? Eius minima nesciunt inventore nam quae ab repellendus ipsa placeat delectus ut, enim excepturi sapiente cupiditate amet nisi distinctio, impedit commodi aut quisquam, quod laboriosam! Molestias cumque ipsam numquam nemo placeat ut accusamus minus eum esse id reiciendis, porro iste nihil voluptatem doloribus, tempore repudiandae! Iusto quod hic consequuntur quaerat corrupti earum, impedit delectus nostrum quibusdam iure quasi dicta in voluptatem vero distinctio vitae! Aperiam, deserunt provident commodi similique sed corporis asperiores iure magni dolor! Sit tenetur dolore eum a odio numquam quo veniam hic tempora doloremque earum eveniet repellat aperiam inventore laborum quia officiis iure, quaerat minus voluptate reiciendis delectus, porro repudiandae excepturi. Magni nulla tempore modi accusamus! Amet dignissimos quasi sequi vel repellat! Eligendi obcaecati amet maxime a ratione architecto nostrum eaque consequuntur minima et? Tempore eveniet asperiores praesentium dolore veniam ipsa culpa nostrum voluptatem debitis. Tenetur quibusdam nostrum expedita dolore, cupiditate totam quasi accusantium, ex maxime, quas nemo ipsum quisquam odit porro. Quae necessitatibus voluptates provident, deserunt itaque numquam temporibus cumque inventore voluptatibus sint fugiat ut. Suscipit quis saepe id aspernatur, nesciunt dicta sit doloremque, assumenda facilis quidem tempora, maiores fugit voluptatibus? Impedit praesentium tempore dolor sapiente nobis vel recusandae, corrupti accusantium id doloribus, aliquam fugit exercitationem tempora iure quos! Vel, accusantium. Deserunt, aliquam. Sint aliquam nostrum voluptatum harum totam error laudantium iure, fugiat perspiciatis animi similique consectetur dolor nam doloremque hic, doloribus qui recusandae possimus reprehenderit rerum rem aspernatur eos expedita! Velit atque, ipsam dolore fuga ex laboriosam asperiores expedita! Nisi minima quam at quod nobis accusamus veniam? Deserunt quaerat, esse ratione iure voluptatum asperiores nisi ad sit eveniet dolor debitis. Maxime fugiat dolorum sunt repudiandae corporis porro non iste? Culpa illo ab, debitis itaque, rerum facere architecto distinctio consectetur, quidem enim ipsam nisi tempore veniam in laudantium dolore et repellat maxime id quasi quod?
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="footer banner">this is footer</div>
+  </div>
+
+</body>
+</html>

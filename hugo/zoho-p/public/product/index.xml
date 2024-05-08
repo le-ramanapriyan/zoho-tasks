@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Products on Zoho</title>
+    <link>//localhost:1313/product/</link>
+    <description>Recent content in Products on Zoho</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Mar 2024 13:02:16 +0530</lastBuildDate>
+    <atom:link href="//localhost:1313/product/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zoho Analytics</title>
+      <link>//localhost:1313/product/z_analytics/</link>
+      <pubDate>Tue, 05 Mar 2024 13:02:16 +0530</pubDate>
+      <guid>//localhost:1313/product/z_analytics/</guid>
+      <description>&lt;p&gt;Zoho Analytics is a powerful business intelligence and analytics platform that allows you to analyze and visualize your data to gain insights.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Zoho CRM</title>
+      <link>//localhost:1313/product/z_crm/</link>
+      <pubDate>Tue, 05 Mar 2024 13:02:16 +0530</pubDate>
+      <guid>//localhost:1313/product/z_crm/</guid>
+      <description>&lt;p&gt;Zoho Analytics is a powerful business intelligence and analytics platform that allows you to analyze and visualize your data to gain insights.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

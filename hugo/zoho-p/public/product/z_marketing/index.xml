@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zoho Marketing on Zoho</title>
+    <link>//localhost:1313/product/z_marketing/</link>
+    <description>Recent content in Zoho Marketing on Zoho</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Mar 2024 18:00:00 +0530</lastBuildDate>
+    <atom:link href="//localhost:1313/product/z_marketing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zoho Backstage</title>
+      <link>//localhost:1313/product/z_marketing/z_backstage/</link>
+      <pubDate>Tue, 05 Mar 2024 18:00:00 +0530</pubDate>
+      <guid>//localhost:1313/product/z_marketing/z_backstage/</guid>
+      <description>&lt;p&gt;Zoho Backstage is [provide a brief description of Zoho Backstage]. It is designed to [mention the primary purpose or goal of Zoho Backstage].&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Zoho Marketing Plus</title>
+      <link>//localhost:1313/product/z_marketing/z_marketingp/</link>
+      <pubDate>Tue, 05 Mar 2024 17:15:00 +0530</pubDate>
+      <guid>//localhost:1313/product/z_marketing/z_marketingp/</guid>
+      <description>&lt;p&gt;Zoho Marketing is a comprehensive marketing automation solution designed to empower businesses in creating, executing, and analyzing their marketing strategies.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Zoho Webinar</title>
+      <link>//localhost:1313/product/z_marketing/z_webinar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/product/z_marketing/z_webinar/</guid>
+      <description>&lt;p&gt;Zoho Webinar is a powerful platform designed to host engaging and interactive online events, allowing you to connect with your audience, share knowledge, and facilitate discussions.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

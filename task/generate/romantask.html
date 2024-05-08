@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roman Numeral Converter</title>
+</head>
+<body>
+  <input type="number" id="input">
+  <input type="button" id="button" onclick="convertToRoman()" value="Convert">
+  <div id="output"></div>
+
+  <script>
+    var romanNumerals = [
+      { symbol: 'M', value: 1000 },
+      { symbol: 'D', value: 500 },
+      { symbol: 'C', value: 100 },
+      { symbol: 'L', value: 50 },
+      { symbol: 'X', value: 10 },
+      { symbol: 'V', value: 5 },
+      { symbol: 'I', value: 1 }
+    ];
+
+    function convertToRoman() {
+      let input = document.getElementById('input').value;
+
+      let output = '';
+
+      for (let i = 0; i < romanNumerals.length; i++) {
+        while (input >= romanNumerals[i].value) {
+          output += romanNumerals[i].symbol;
+          input -= romanNumerals[i].value;
+        }
+      }
+
+      document.getElementById('output').innerText = output;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zoho Finance on Zoho</title>
+    <link>//localhost:1313/product/z_finance/</link>
+    <description>Recent content in Zoho Finance on Zoho</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Mar 2024 11:42:50 +0530</lastBuildDate>
+    <atom:link href="//localhost:1313/product/z_finance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zoho Billing</title>
+      <link>//localhost:1313/product/z_finance/z_billing/</link>
+      <pubDate>Tue, 05 Mar 2024 11:42:50 +0530</pubDate>
+      <guid>//localhost:1313/product/z_finance/z_billing/</guid>
+      <description>&lt;p&gt;Zoho Billing is a part of the Zoho suite of business applications, designed to help businesses manage their invoicing and billing processes efficiently.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Zoho Invoice</title>
+      <link>//localhost:1313/product/z_finance/z_invoice/</link>
+      <pubDate>Tue, 05 Mar 2024 11:31:27 +0530</pubDate>
+      <guid>//localhost:1313/product/z_finance/z_invoice/</guid>
+      <description>&lt;p&gt;Zoho Invoice is an invoicing and billing software designed to help businesses create and manage invoices efficiently.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Zoho Books</title>
+      <link>//localhost:1313/product/z_finance/z_books/</link>
+      <pubDate>Tue, 05 Mar 2024 11:31:17 +0530</pubDate>
+      <guid>//localhost:1313/product/z_finance/z_books/</guid>
+      <description>&lt;p&gt;Zoho Books is an accounting software designed for small and medium-sized businesses.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

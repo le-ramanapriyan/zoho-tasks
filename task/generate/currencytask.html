@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="curr-input">
+  <input type="button" id="button-value" onclick="currsearch()"> <br><br>
+  <div id="output"></div>
+  <script>
+    
+    var currencies = ['INR', 'USD', 'AUD', 'EUR', 'JPY', 'CAD', 'CNY', 'KZT', 'MGA', 'MAD', 'Invalid Input'];
+    let buttonValue = document.querySelector('#button-value');
+    buttonValue.value = 'Generate';
+    
+    function currsearch() {
+      let input = document.querySelector('#curr-input').value;
+
+      if(buttonValue.value == 'Generate') {
+        buttonValue.value = 'Change';
+        let output = document.querySelector('#output');
+        output.innerHTML = `<select name="Currencies" id="currency-list"></select>`;
+        let currencyList = document.querySelector('#currency-list');
+        let option = '';
+        for (let i = 0; i < currencies.length; i++) {
+          option += `<option value="${currencies[i]}">${currencies[i]}</option>`;
+        }
+        currencyList.innerHTML = option;
+      }
+      
+      let currencyList = document.querySelector('#currency-list');
+
+      for (let i = 0; i < currencies.length; i++) {
+        if (input == currencies[i]) {
+          currencyList.value = input;
+          break;
+        }
+        else {
+          currencyList.value = 'Invalid Input';
+        }
+      }
+    }
+  </script>
+</body>
+</html>

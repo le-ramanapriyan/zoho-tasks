@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <h1>Contact Us</h1>
+  <p>For any inquiries or assistance, feel free to get in touch with our {{ .Params.Location }} office. Our dedicated team is here to help you.</p>
+  <h3>{{ .Params.Address }}</h3>
+  <h3>
+    {{ range .Params.phone }}
+    - {{ . }} <br>
+    {{ end }}  
+  </h3>
+  <h3>{{ .Params.Fax }}</h3>
+{{ end }}

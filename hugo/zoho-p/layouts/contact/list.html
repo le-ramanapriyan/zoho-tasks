@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <div class="container">
+    <div class="contact-header">
+      <h1>Contact Locations</h1>
+    </div>
+    {{ range .Pages.ByWeight }}
+      <div class="contact-content">
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <p>{{ .Content }}</p>
+      </div>
+    {{ end }}
+  </div>
+{{ end }}

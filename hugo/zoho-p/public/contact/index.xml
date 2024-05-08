@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Contact Us on Zoho</title>
+    <link>//localhost:1313/contact/</link>
+    <description>Recent content in Contact Us on Zoho</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Mar 2024 14:04:25 +0530</lastBuildDate>
+    <atom:link href="//localhost:1313/contact/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kumbakonam</title>
+      <link>//localhost:1313/contact/kumbakonam/</link>
+      <pubDate>Tue, 05 Mar 2024 14:04:25 +0530</pubDate>
+      <guid>//localhost:1313/contact/kumbakonam/</guid>
+      <description>Address = &amp;ldquo;X96M+3QH, Anna Nagar, Kumbakonam, Tamil Nadu 612001, India&amp;rdquo;&#xA;Phone = [&amp;ldquo;kum - 69656070&amp;rdquo;, &amp;ldquo;kum - 69656060&amp;rdquo;]&#xA;Fax = &amp;lsquo;mno 67447172&amp;rsquo;</description>
+    </item>
+    <item>
+      <title>Madurai Office</title>
+      <link>//localhost:1313/contact/madurai/</link>
+      <pubDate>Mon, 04 Mar 2024 18:17:53 +0530</pubDate>
+      <guid>//localhost:1313/contact/madurai/</guid>
+      <description>Address = &amp;ldquo;R2HQ+JW, Kappalur, Tamil Nadu 625706, India&amp;rdquo;&#xA;Phone = [&amp;ldquo;abc - 69656070&amp;rdquo;, &amp;ldquo;xyz - 69656060&amp;rdquo;]&#xA;Fax = &amp;lsquo;mno 67447172&amp;rsquo;</description>
+    </item>
+    <item>
+      <title>Chennai Office</title>
+      <link>//localhost:1313/contact/chennai/</link>
+      <pubDate>Mon, 04 Mar 2024 17:42:07 +0530</pubDate>
+      <guid>//localhost:1313/contact/chennai/</guid>
+      <description>Address = &amp;ldquo;Estancia IT Park, Plot no. 140, 151, GST Road, Vallancheri, Chengalpattu District, Tamil Nadu - 603202, India&amp;rdquo;&#xA;Phone = [&amp;ldquo;044 - 69656070&amp;rdquo;, &amp;ldquo;044 - 69656060&amp;rdquo;]&#xA;Fax = &amp;lsquo;044 67447172&amp;rsquo;</description>
+    </item>
+  </channel>
+</rss>

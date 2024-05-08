@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img{
+      height: 200px;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <form name="myForm">
+    <label><input type="radio" name="shape" value="circle" checked>Circle</label>
+    <label><input type="radio" name="shape" value="square">Square</label>
+    <label><input type="radio" name="shape" value="triangle">Triangle</label>
+    <input type="button" onclick="show()" value="Show">
+  </form>
+  <div class="shape-place"></div>
+
+  <script>
+    var shapePlace = document.querySelector('.shape-place');
+    
+    function show() {
+
+      var input = document.myForm.shape.value;
+
+      if(input == 'circle') {
+        shapePlace.innerHTML = `<img src="shapes/circle.png" alt="">`;
+      }
+      else if (input == 'square') {
+        shapePlace.innerHTML = `<img src="shapes/square.svg" alt="">`;
+      }
+      else if (input == 'triangle') {
+        shapePlace.innerHTML = `<img src="shapes/triangle.webp" alt="">`;
+      }
+    }
+  </script>
+</body>
+</html>

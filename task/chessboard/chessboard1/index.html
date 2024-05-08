@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <script>
+    var table = document.createElement('table');
+    for (var i = 0; i < 8; i++) {
+      var tr = document.createElement('tr');
+
+      for (var j = 0; j < 8; j++) {
+        var td = document.createElement('td');
+
+        tr.appendChild(td);
+      }
+
+      table.appendChild(tr);
+    }
+    document.body.append(table);
+  </script>
+</body>
+
+</html>

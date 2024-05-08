@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .tr{
+      clear: left;
+    }
+    .td {
+      float: left;
+      /* display: inline-block; */
+      height: 40px;
+      width: 40px;
+    }
+    .whitecell {
+      background-color: white;
+    }
+    .blackcell {
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+  <input type="number" id="input">
+  <button onclick="calculate()">Enter</button>
+  <p></p>
+
+  <script>
+    function calculate () {
+      let container = document.querySelector('p');
+      container.innerHTML = '';
+      const n = input.value;
+      
+      container.innerHTML += '<div class="table">';
+        
+        let setAttr;
+        for(let i = 0; i < n; i++) {
+          container.innerHTML += '<div class="tr">';
+          
+          for (let j = 0; j < n; j++) {
+            if((i+j)%2 == 0){
+              setAttr = "td whitecell";
+            }
+            else {
+              setAttr = "td blackcell";
+            }
+            container.innerHTML += `<div class="${setAttr}" ></div>`;
+            
+          }
+        }
+    }
+  </script>
+</body>
+</html>

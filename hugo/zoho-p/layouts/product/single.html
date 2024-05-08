@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <div class="container">
+    {{ with .Params.feature_image }}
+      <img src="{{ . }}" />
+    {{ end }}
+    <h2>{{ .Title}}</h2>
+    {{ .Content }}
+    {{ partial "footer.html" . }}
+  </div>
+{{ end }}

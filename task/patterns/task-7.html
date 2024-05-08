@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="number" id="input">
+  <button onclick="calculate()">Enter</button>
+  <p></p>
+  
+  <script>
+    let input = document.querySelector('#input');
+    let one = document.querySelector('p');
+
+    function calculate() {
+      one.innerText = '';
+      const n = input.value;
+
+      for(let i = 1; i <=n; i++) {
+
+        for (let j = 5; j >= 1; j--) {
+          one.innerHTML += `${j}` + "\t";
+        }
+        one.innerHTML += "<br>";
+      }
+    }
+
+  </script>
+</body>
+</html>

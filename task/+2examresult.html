@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>+2 Result Sheet</title>
+  <style>
+    body {
+      font-size: 20px;
+    }
+
+    label {
+      display: block;
+    }
+
+    input:not(#button),
+    select {
+      width: 139px;
+    }
+
+    span {
+      display: inline-block;
+      width: 100px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      height: 30px;
+      width: 150px;
+      border: 1px solid black;
+    }
+
+    .ttopic>* {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .pass {
+      background-color: rgba(0, 255, 0, 0.4);
+    }
+
+    .fail {
+      background-color: rgba(255, 0, 0, 0.4);
+    }
+
+    .tfooter td:not(:last-child) {
+      background-color: aqua;
+    }
+
+    .tfooter .pass {
+      background-color: rgb(0, 255, 0);
+    }
+
+    .tfooter .fail {
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+    <form name="myForm">
+      <label><span>Reg No:</span><input type="text" name="regno" value="cb21s260797"></label>
+      <label><span>Name: </span><input type="text" name="stuname" value="ramanapriyan m r v"></label>
+      <label><span>School: </span><input type="text" name="loc" value="Kumbakonam"></label>
+      <label><span>DOB: </span><input type="date" name="dob" value="2003-11-27"></label>
+      <label><span>Tamil:</span><input type="number" name="tamil" min="0" max="100" value="77.67"></label>
+      <label><span>English:</span><input type="number" name="english" min="0" max="100" value="75.23"></label>
+      <label><span>Maths:</span><input type="number" name="maths" min="0" max="100" value="73.01"></label>
+      <label><span>Biology:</span><input type="number" name="biology" min="0" max="100" value="71.48"></label>
+      <label><span>Physics:</span><input type="number" name="physics" min="0" max="100" value="70.63"></label>
+      <label><span>Chemistry:</span><input type="number" name="chemistry" min="0" max="100" value="75.77"></label>
+      <input type="button" name="check" value="Submit" id="button" onclick="calc()">
+    </form>
+
+    <table id="table" style="display: none;">
+      <thead id="thead"></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+
+  <script>
+    function calc() {
+
+      if (document.myForm.check.value === 'Submit') {
+        document.querySelector('#table').style = '';
+        document.myForm.check.value = 'Update';
+        generate();
+      }
+
+      update();
+    }
+
+    function update() {
+      let regNo = document.myForm.regno.value.toUpperCase();
+      let stuName = document.myForm.stuname.value.toUpperCase();
+      let loc = document.myForm.loc.value.toUpperCase();
+      let dob = document.myForm.dob.value.toUpperCase();
+      document.querySelector('#tregno').innerHTML = "Register Number: " + regNo;
+      document.querySelector('#tstuname').innerHTML = "Name: " + stuName;
+      document.querySelector('#loc').innerHTML = "School: " + loc;
+      document.querySelector('#dob').innerHTML = "DateOfBirth: " + dob;
+
+      let subjects = [
+        { subject: 'Tamil', mark: parseFloat(document.myForm.tamil.value) || 0 },
+        { subject: 'English', mark: parseFloat(document.myForm.english.value) || 0 },
+        { subject: 'Maths', mark: parseFloat(document.myForm.maths.value) || 0 },
+        { subject: 'Biology', mark: parseFloat(document.myForm.biology.value) || 0 },
+        { subject: 'Physics', mark: parseFloat(document.myForm.physics.value) || 0 },
+        { subject: 'Chemistry', mark: parseFloat(document.myForm.chemistry.value) || 0 }
+      ];
+
+      let total = 0;
+
+      for (let i = 0; i < subjects.length; i++) {
+        total += subjects[i].mark;
+      }
+      total = total.toFixed(2);
+
+      let tres = 'pass';
+
+      let average = parseFloat((total / subjects.length).toFixed(2));
+      let grade = '';
+
+      if (tres === 'pass') {
+        if (average >= 80) {
+          grade = "A";
+        } else if (average >= 60) {
+          grade = "B";
+        } else if (average >= 40) {
+          grade = "C";
+        }
+      } else {
+        grade = 'F';
+      }
+
+      for (let i = 0; i < subjects.length; i++) {
+        let result;
+
+        if (subjects[i].mark >= 35) {
+          result = "pass";
+        } else {
+          result = "fail";
+          tres = 'fail';
+        }
+        
+        document.querySelector(`.subject${i}`).innerHTML = `${subjects[i].subject}`;
+        document.querySelector(`.mark${i}`).innerHTML = `${subjects[i].mark}`;
+        let output = document.querySelector(`.result${i}`)
+        output.innerHTML = `${result}`;
+        document.querySelector('#ttot').innerHTML = `${total}`;
+        let output1 = document.querySelector('#tres');
+        output1.innerHTML = `${tres}`;
+        document.querySelector(`#tavg`).innerHTML = `${average}%`;
+        let output2 = document.querySelector(`#grade`);
+        output2.innerHTML = `${grade}`;
+
+        output.setAttribute('class', `${result}`);
+        output1.setAttribute('class', `${tres}`);
+        output2.setAttribute('class', `${tres}`);
+      }
+    }
+
+    function generate() {
+      let thead = document.querySelector('#thead');
+      thead.innerHTML = `
+        <tr>
+          <td colspan="4" style="text-align:center;">+2 EXAM RESULTS</td>
+        </tr>
+        <tr>
+            <td colspan="2" id="tregno"></td>
+            <td colspan="2" id="tstuname"></td>
+        </tr>
+        <tr>
+            <td colspan="2" id="loc"></td>
+            <td colspan="2" id="dob"></td>
+        </tr>
+        <tr class="ttopic">
+            <td>Subjects</td>
+            <td>Max Mark</td>
+            <td>Obtain Marks</td>
+            <td>Result</td>
+        </tr>`;
+
+      let tbody = document.querySelector('#tbody');
+      let tb = '';
+
+      for (let i = 0; i <= 5; i++) {
+        tb += `
+          <tr>
+            <td class="subject${i}"></td>
+            <td class="maxmark">100</td>
+            <td class="mark${i}"></td>
+            <td class="result${i}"></td>
+          </tr>`;
+      }
+      tbody.innerHTML += tb + `
+          <tr class='tfooter'>
+            <td>Total:</td>
+            <td>600</td>
+            <td id="ttot"></td>
+            <td id="tres"></td>
+          </tr>
+          <tr class='tfooter'>
+            <td>Average:</td>
+            <td id="tavg"></td>
+            <td>Grade:</td>
+            <td id="grade"></td>
+          </tr>`;
+    }
+  </script>
+</body>
+
+</html>
