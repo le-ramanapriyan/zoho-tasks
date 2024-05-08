@@ -46,7 +46,7 @@
       background-color: rgba(255, 0, 0, 0.4);
     }
 
-    .tfooter td:not(:last-child) {
+    .tfooter td:not(:last-child, .pass, .fail) {
       background-color: aqua;
     }
 
@@ -136,7 +136,7 @@
       }
 
       for (let i = 0; i < subjects.length; i++) {
-        let result;
+        let result = '';
 
         if (subjects[i].mark >= 35) {
           result = "pass";
@@ -144,21 +144,22 @@
           result = "fail";
           tres = 'fail';
         }
-        
-        document.querySelector(`.subject${i}`).innerHTML = `${subjects[i].subject}`;
-        document.querySelector(`.mark${i}`).innerHTML = `${subjects[i].mark}`;
-        let output = document.querySelector(`.result${i}`)
+        document.querySelector(`#subject${i}`).innerHTML = `${subjects[i].subject}`;
+        document.querySelector(`#mark${i}`).innerHTML = `${subjects[i].mark}`;
+        let output = document.querySelector(`#result${i}`);
         output.innerHTML = `${result}`;
         document.querySelector('#ttot').innerHTML = `${total}`;
         let output1 = document.querySelector('#tres');
         output1.innerHTML = `${tres}`;
-        document.querySelector(`#tavg`).innerHTML = `${average}%`;
-        let output2 = document.querySelector(`#grade`);
-        output2.innerHTML = `${grade}`;
+        let output2 = document.querySelector(`#tavg`);
+        output2.innerHTML = `${average}%`;
+        let output3 = document.querySelector(`#grade`);
+        output3.innerHTML = `${grade}`;
 
         output.setAttribute('class', `${result}`);
         output1.setAttribute('class', `${tres}`);
         output2.setAttribute('class', `${tres}`);
+        output3.setAttribute('class', `${tres}`);
       }
     }
 
@@ -189,10 +190,10 @@
       for (let i = 0; i <= 5; i++) {
         tb += `
           <tr>
-            <td class="subject${i}"></td>
+            <td id="subject${i}"></td>
             <td class="maxmark">100</td>
-            <td class="mark${i}"></td>
-            <td class="result${i}"></td>
+            <td id="mark${i}"></td>
+            <td id="result${i}"></td>
           </tr>`;
       }
       tbody.innerHTML += tb + `
