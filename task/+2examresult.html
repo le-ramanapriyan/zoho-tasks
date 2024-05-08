@@ -61,24 +61,24 @@
 </head>
 
 <body>
-    <form name="myForm">
-      <label><span>Reg No:</span><input type="text" name="regno" value="cb21s260797"></label>
-      <label><span>Name: </span><input type="text" name="stuname" value="ramanapriyan m r v"></label>
-      <label><span>School: </span><input type="text" name="loc" value="Kumbakonam"></label>
-      <label><span>DOB: </span><input type="date" name="dob" value="2003-11-27"></label>
-      <label><span>Tamil:</span><input type="number" name="tamil" min="0" max="100" value="77.67"></label>
-      <label><span>English:</span><input type="number" name="english" min="0" max="100" value="75.23"></label>
-      <label><span>Maths:</span><input type="number" name="maths" min="0" max="100" value="73.01"></label>
-      <label><span>Biology:</span><input type="number" name="biology" min="0" max="100" value="71.48"></label>
-      <label><span>Physics:</span><input type="number" name="physics" min="0" max="100" value="70.63"></label>
-      <label><span>Chemistry:</span><input type="number" name="chemistry" min="0" max="100" value="75.77"></label>
-      <input type="button" name="check" value="Submit" id="button" onclick="calc()">
-    </form>
+  <form name="myForm">
+    <label><span>Reg No:</span><input type="text" name="regno" value="cb21s260797"></label>
+    <label><span>Name: </span><input type="text" name="stuname" value="ramanapriyan m r v"></label>
+    <label><span>School: </span><input type="text" name="loc" value="Kumbakonam"></label>
+    <label><span>DOB: </span><input type="date" name="dob" value="2003-11-27"></label>
+    <label><span>Tamil:</span><input type="number" name="tamil" min="0" max="100" value="77.67"></label>
+    <label><span>English:</span><input type="number" name="english" min="0" max="100" value="75.23"></label>
+    <label><span>Maths:</span><input type="number" name="maths" min="0" max="100" value="73.01"></label>
+    <label><span>Biology:</span><input type="number" name="biology" min="0" max="100" value="71.48"></label>
+    <label><span>Physics:</span><input type="number" name="physics" min="0" max="100" value="70.63"></label>
+    <label><span>Chemistry:</span><input type="number" name="chemistry" min="0" max="100" value="75.77"></label>
+    <input type="button" name="check" value="Submit" id="button" onclick="calc()">
+  </form>
 
-    <table id="table" style="display: none;">
-      <thead id="thead"></thead>
-      <tbody id="tbody"></tbody>
-    </table>
+  <table id="table" style="display: none;">
+    <thead id="thead"></thead>
+    <tbody id="tbody"></tbody>
+  </table>
 
   <script>
     function calc() {
@@ -123,18 +123,6 @@
       let average = parseFloat((total / subjects.length).toFixed(2));
       let grade = '';
 
-      if (tres === 'pass') {
-        if (average >= 80) {
-          grade = "A";
-        } else if (average >= 60) {
-          grade = "B";
-        } else if (average >= 40) {
-          grade = "C";
-        }
-      } else {
-        grade = 'F';
-      }
-
       for (let i = 0; i < subjects.length; i++) {
         let result = '';
 
@@ -144,6 +132,19 @@
           result = "fail";
           tres = 'fail';
         }
+
+        if (tres === 'pass') {
+          if (average >= 80) {
+            grade = "A";
+          } else if (average >= 60) {
+            grade = "B";
+          } else if (average >= 40) {
+            grade = "C";
+          }
+        } else {
+          grade = 'F';
+        }
+
         document.querySelector(`#subject${i}`).innerHTML = `${subjects[i].subject}`;
         document.querySelector(`#mark${i}`).innerHTML = `${subjects[i].mark}`;
         let output = document.querySelector(`#result${i}`);
